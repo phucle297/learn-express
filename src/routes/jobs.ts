@@ -8,6 +8,10 @@ jobRouter.get(_PREFIX, (req, res) => {
   res.send("GET /jobs");
 });
 
+jobRouter.get(_PREFIX + "/:id", (req, res) => {
+  res.send("GET /jobs " + req.params.id);
+});
+
 jobRouter.post(_PREFIX, (req, res) => {
   res.send("POST /jobs");
 });
