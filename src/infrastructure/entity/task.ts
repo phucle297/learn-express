@@ -1,5 +1,4 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
-import { Job } from "./job";
+import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity("todo_Task")
 export class Task {
@@ -17,7 +16,4 @@ export class Task {
     length: 255,
   })
   name: string;
-
-  @ManyToOne(() => Job, (job) => job.tasks)
-  job: Job;
 }
